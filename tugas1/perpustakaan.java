@@ -44,7 +44,7 @@ public class perpustakaan {
                     dataperpus.hasilbuku(perpustakaan.Politik());
                     break;
                 case "7":
-                    System.out.println("Buku dalam kategori Fiksi : ");
+                    System.out.println("Buku dalam kategori Fiksi :");
                     dataperpus.hasilbuku(perpustakaan.Fiksi());
                     break;
                 case "8":
