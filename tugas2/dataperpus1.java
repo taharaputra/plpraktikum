@@ -93,9 +93,9 @@ public class dataperpus1 {
         return teknologi;
     }
     
-    public void sinopsis(String[][] listBuku) {
+    public void sinopsis(String[][] databuku) {
         for (int i = 0; i < 5; i++) {
-            String sinopsis = listBuku[i][5];
+            String sinopsis = databuku[i][5];
             int jumlahKata = jumlahKata(sinopsis);
             System.out.println(jumlahKata + " kata");
         }
