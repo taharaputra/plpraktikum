@@ -93,24 +93,18 @@ public class dataperpus1 {
         return teknologi;
     }
     
-    // public void sinopsis(String[][] listBuku) {
-    //     for (int i = 0; i < 5; i++) {
-    //         String sinopsis = listBuku[i][5];
-    //         int jumlahKata = Sinopsis(sinopsis);
-    //         // System.out.println("\nJudul        : " + listBuku[i][0]+"\nHalaman      : " + listBuku[i][1]+"\nPenulis      : " + listBuku[i][2]+"\nPenerbit     : " + listBuku[i][3]+"\nTahun Terbit : " + listBuku[i][4]+"\nSinopsis     : " + listBuku[i][5]+"\nJumlah Kata  : "+ jumlahKata);
-    //     }
-    // }
-    // public int sinopsis(String[][] sinopsis2) {
-    //     for (int i = 0; i < 5; i++) {
-    //         String sinopsis = sinopsis2[i][5];
-    //         int jumlahKata = Sinopsis(sinopsis);
-    //         // System.out.println("\nJudul        : " + listBuku[i][0]+"\nHalaman      : " + listBuku[i][1]+"\nPenulis      : " + listBuku[i][2]+"\nPenerbit     : " + listBuku[i][3]+"\nTahun Terbit : " + listBuku[i][4]+"\nSinopsis     : " + listBuku[i][5]+"\nJumlah Kata  : "+ jumlahKata);
-    //     }
-    // }
-    // public int Sinopsis(String sinopsis) {
-    //     String[] kata = sinopsis.split(" ");
-    //     return kata.length;
-    // }
+    public void sinopsis(String[][] listBuku) {
+        for (int i = 0; i < 5; i++) {
+            String sinopsis = listBuku[i][5];
+            int jumlahKata = jumlahKata(sinopsis);
+            System.out.println(jumlahKata + " kata");
+        }
+    }
+   
+    public static int jumlahKata(String sinopsis) {
+        String[] kata = sinopsis.split(" ");
+        return kata.length;
+    }
 
     public static void hasilbuku(String [][] databuku) {
         for (int i = 0 ; i < databuku.length ; i++) {
@@ -120,7 +114,8 @@ public class dataperpus1 {
             System.out.println("Jumlah Halaman: " + databuku[i][2]);
             System.out.println("Tahun Terbit: " + databuku[i][3]);
             System.out.println("Penerbit: " + databuku[i][4]);
-            System.out.println("Sinopsis: " + databuku[i][5] + "\n" Sinopsis);
+            System.out.println("Sinopsis: " + databuku[i][5]);
+            System.out.println("Jumlah Kata: " + jumlahKata(databuku[i][5]) + " kata");
             System.out.println();
         }
     }
