@@ -7,10 +7,10 @@ public class Hero {
     private double defensePower;
 
     public Hero() {
-        // this.nama = "";
-        // this.hp = 0;
-        // this.attackPower = 0;
-        // this.defensePower = 0;
+        this.nama = "";
+        this.hp = 0;
+        this.attackPower = 0;
+        this.defensePower = 0;
     }
 
     public Hero(String nama, double hp, double attackPower, double defensePower) {
@@ -30,6 +30,7 @@ public class Hero {
 
     public void setHp(double hp) {
         this.hp = hp;
+        
     }
 
     public double getHp() {
@@ -53,7 +54,9 @@ public class Hero {
     }
     
     public void attackPower(Hero hero) {
-        double damage = attackPower - hero.defensePower;
-        hero.hp -= damage;
+        double damage = attackPower - hero.getDefensePower();
+        if (damage > 0) {
+            hero.setHp(hero.getHp() - damage);
+        }
     }
 }

@@ -31,11 +31,11 @@ public class fightHero {
         System.out.print("Nama hero: " );
         hero2.setNama(input.nextLine());
         System.out.print("Health Point: ");
-        hero2.setHp(input.nextInt());
+        hero2.setHp(input.nextDouble());
         System.out.print("Attack: ");
-        hero2.setAttackPower(input.nextInt());
+        hero2.setAttackPower(input.nextDouble());
         System.out.print("Defense: ");
-        hero2.setDefensePower(input.nextInt());
+        hero2.setDefensePower(input.nextDouble());
 
         System.out.println("===============================================");
         System.out.println("===============================================");
@@ -53,6 +53,18 @@ public class fightHero {
             System.out.println("Health " + hero2.getNama() + " saat ini " + hero2.getHp());
             System.out.println();
 
+            if (hero1.getHp() <= 0) {
+                System.out.println("Pertarungan telah usai!");
+                System.out.println(hero1.getNama() + " telah kalah!");
+                System.out.println(hero2.getNama() + " adalah pemenangnya!");
+                break;
+            } else if (hero2.getHp() <= 0){
+                System.out.println("Pertarungan telah usai!");
+                System.out.println(hero2.getNama() + " telah kalah!");
+                System.out.println(hero1.getNama() + " adalah pemenangnya!");
+                break;
+            }
+            
             System.out.println(hero2.getNama() + " menyerang " + hero1.getNama());
             System.out.println();
 
@@ -61,16 +73,18 @@ public class fightHero {
             System.out.println(hero1.getNama() + " memiliki pertahanan sebesar " + hero1.getDefensePower());
             System.out.println("Health " + hero1.getNama() + " saat ini " + hero1.getHp());
             System.out.println();
-        }
 
         if (hero1.getHp() <= 0) {
             System.out.println("Pertarungan telah usai!");
-            System.out.println(hero1.getNama() + " te;ah kalah!");
+            System.out.println(hero1.getNama() + " telah kalah!");
             System.out.println(hero2.getNama() + " adalah pemenangnya!");
-        } else {
+            break;
+        } else if (hero2.getHp() <= 0){
             System.out.println("Pertarungan telah usai!");
             System.out.println(hero2.getNama() + " telah kalah!");
             System.out.println(hero1.getNama() + " adalah pemenangnya!");
+            break;
+        }
         }
 
         input.close();
