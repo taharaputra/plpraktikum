@@ -74,19 +74,18 @@ public class fightHero {
             System.out.println("Health " + hero1.getNama() + " saat ini " + hero1.getHp());
             System.out.println();
 
-        if (hero1.getHp() <= 0) {
-            System.out.println("Pertarungan telah usai!");
-            System.out.println(hero1.getNama() + " telah kalah!");
-            System.out.println(hero2.getNama() + " adalah pemenangnya!");
-            break;
-        } else if (hero2.getHp() <= 0){
-            System.out.println("Pertarungan telah usai!");
-            System.out.println(hero2.getNama() + " telah kalah!");
-            System.out.println(hero1.getNama() + " adalah pemenangnya!");
-            break;
+            if (hero1.getHp() <= 0) {
+                System.out.println("Pertarungan telah usai!");
+                System.out.println(hero1.getNama() + " telah kalah!");
+                System.out.println(hero2.getNama() + " adalah pemenangnya!");
+                break;
+            } else if (hero2.getHp() <= 0){
+                System.out.println("Pertarungan telah usai!");
+                System.out.println(hero2.getNama() + " telah kalah!");
+                System.out.println(hero1.getNama() + " adalah pemenangnya!");
+                break;
+            }
         }
-        }
-
         input.close();
     }
 }
